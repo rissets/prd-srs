@@ -1,0 +1,26 @@
+sequenceDiagram
+ actor L as Pustakawan
+ participant V as Django view
+ participant I as Identity adapter
+ participant S as Loan service
+ participant D as PostgreSQL16
+ L->>V: POST reject atau return UUID
+ V->>I: Trusted principal
+ I-->>V: ID dan role
+ V->>S: Authorize librarian, validasi action
+ S->>D: BEGIN, lock book lalu loan
+ alt reject dengan pending
+ S->>D: Set rejected, decided_at, decider, COMMIT
+ D-->>S: committed
+ S-->>V: Rejection berhasil
+ V-->>L: Detail rejected
+ else return dengan approved
+ S->>D: Set returned, returned_at, pertahankan decision, COMMIT
+ D-->>S: committed
+ S-->>V: Return berhasil
+ V-->>L: Detail returned
+ else Invalid state
+ S->>D: ROLLBACK
+ S-->>V: Konflik state
+ V-->>L: 409, audit tetap
+ end

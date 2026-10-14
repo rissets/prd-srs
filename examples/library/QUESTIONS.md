@@ -1,0 +1,4 @@
+# Pertanyaan dan keputusan terbuka
+0.1 MVP/draft. **Tidak ada gap keputusan bisnis yang memblokir penulisan paket ini** dalam lingkup stakeholder sintetis yang diberikan. Tidak ada user nyata dihubungi. Pertanyaan baru akan dicatat di sini jika bukti adapter/katalog bertentangan dengan scope.
+
+Dependensi verifikasi, bukan business assumptions: actual trusted-principal contract adapter, sumber katalog onboarding, pemilihan storage backup off-VM, credential/network environment dan approval authority dokumen belum tersedia. TASK-001/TASK-002/TASK-006/TASK-007 memeriksa masing-masing sebelum pelaksanaan terkait. Paket ready for stakeholder review; belum approved dan tidak menyatakan implementasi sudah siap tanpa prerequisite ini. Proposal ADR-001–004 memakai delegasi desain teknis SRC-001 S6/S7/S8, bukan approval.

@@ -1,0 +1,24 @@
+[
+  {
+    "case": "missing-reference",
+    "expected_rejection": true,
+    "detected": [
+      "Broken link: SKILL.md -> references/database-design.md",
+      "Broken link: references/srs.md -> database-design.md"
+    ]
+  },
+  {
+    "case": "missing-invocation",
+    "expected_rejection": true,
+    "detected": [
+      "UI default_prompt does not invoke skill"
+    ]
+  },
+  {
+    "case": "unclosed-fence",
+    "expected_rejection": true,
+    "detected": [
+      "Unclosed code fence in SKILL.md"
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "source": "diagrams/business.mmd",
+    "status": "pass",
+    "svg": "business.svg",
+    "png": "business.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 1136,
+      "height": 1196
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/components.mmd",
+    "status": "pass",
+    "svg": "components.svg",
+    "png": "components.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 1657,
+      "height": 233
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/context.mmd",
+    "status": "pass",
+    "svg": "context.svg",
+    "png": "context.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 1578,
+      "height": 278
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/dependencies.mmd",
+    "status": "pass",
+    "svg": "dependencies.svg",
+    "png": "dependencies.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 1824,
+      "height": 222
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/erd.mmd",
+    "status": "pass",
+    "svg": "erd.svg",
+    "png": "erd.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 570,
+      "height": 716
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/return.mmd",
+    "status": "pass",
+    "svg": "return.svg",
+    "png": "return.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 1416,
+      "height": 1020
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/sequence.mmd",
+    "status": "pass",
+    "svg": "sequence.svg",
+    "png": "sequence.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 1706,
+      "height": 1328
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/states.mmd",
+    "status": "pass",
+    "svg": "states.svg",
+    "png": "states.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 321,
+      "height": 460
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/topology.mmd",
+    "status": "pass",
+    "svg": "topology.svg",
+    "png": "topology.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 1641,
+      "height": 377
+    },
+    "bounds_precision": "nearest integer pixel"
+  },
+  {
+    "source": "diagrams/usecases.mmd",
+    "status": "pass",
+    "svg": "usecases.svg",
+    "png": "usecases.png",
+    "bounds": {
+      "x": 24,
+      "y": 24,
+      "width": 523,
+      "height": 836
+    },
+    "bounds_precision": "nearest integer pixel"
+  }
+]

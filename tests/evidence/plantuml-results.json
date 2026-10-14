@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "source": "sample-library/diagrams/usecases.puml",
+  "renderer": "PlantUML 1.2026.8",
+  "layout": "smetana",
+  "syntax_check_exit_code": 0,
+  "svg_render_exit_code": 0,
+  "png_render_exit_code": 0,
+  "png_size": [
+    467,
+    524
+  ],
+  "jar_sha256": "796e464ece7c2d4ea1d6b75b26603f703bd1032c6e728940d3131963db76441d"
+}

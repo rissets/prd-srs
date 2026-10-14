@@ -1,0 +1,6 @@
+flowchart LR
+ A[Anggota] -->|Katalog dan loan sendiri| P[Portal satu perpustakaan]
+ L[Pustakawan] -->|Keputusan dan pengembalian| P
+ I[Adapter identity existing] -->|Trusted external ID dan role| P
+ O[Operator di luar portal] -->|Provision akun di luar scope| I
+ P -->|Data loan dan katalog| DB[(PostgreSQL16 private)]

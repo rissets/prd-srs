@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD & SRS"
+  short_description: "Detailed PRD/SRS, diagrams, data design and plans"
+  default_prompt: "Gunakan $prd-srs untuk membuat paket PRD/SRS detail dengan diagram arsitektur/topologi, workflow, use case, izin akses, ERD, desain database, dan rencana implementasi. Tanyakan keputusan yang belum jelas kepada saya."

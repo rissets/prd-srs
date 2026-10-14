@@ -1,0 +1,24 @@
+erDiagram
+ USER_REFERENCE ||--o{ LOAN : member
+ USER_REFERENCE o|--o{ LOAN : decider
+ BOOK ||--o{ LOAN : requested
+ USER_REFERENCE {
+ text external_id PK
+ text last_observed_role
+ }
+ BOOK {
+ uuid id PK
+ text title
+ text isbn UK
+ }
+ LOAN {
+ uuid id PK
+ uuid book_id FK
+ text member_external_id FK
+ text state
+ timestamptz submitted_at
+ timestamptz decided_at
+ timestamptz returned_at
+ text decider_external_id FK
+ uuid submission_token UK
+ }

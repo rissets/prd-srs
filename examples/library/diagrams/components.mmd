@@ -1,0 +1,10 @@
+flowchart LR
+ B[Browser] -->|HTTPS| R[Reverse proxy]
+ R -->|HTTP loopback proposed| V[Django views dan SSR]
+ I[Adapter existing] -->|Principal| V
+ V --> A[Authorization dan scoped query]
+ A --> C[Catalog query]
+ A --> L[Loan service dan transaction]
+ C --> D[(PostgreSQL16)]
+ L --> D
+ V -->|HTML dan feedback| B

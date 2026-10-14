@@ -1,0 +1,28 @@
+flowchart TD
+ subgraph Anggota
+ A[Mulai: memilih buku]
+ B[Ajukan untuk diri sendiri]
+ end
+ subgraph Pustakawan
+ E[Tolak pending]
+ F[Setujui pending]
+ I[Catat pengembalian]
+ end
+ subgraph Sistem
+ C[Loan pending]
+ D{Buku masih bebas dan loan pending?}
+ R[rejected - selesai]
+ G[approved]
+ H[Konflik: pending tetap]
+ J[returned - selesai]
+ end
+ A --> B
+ B --> C
+ C --> E
+ C --> F
+ F --> D
+ E --> R
+ D -->|Ya: atomic commit| G
+ D -->|Tidak| H
+ G --> I
+ I --> J

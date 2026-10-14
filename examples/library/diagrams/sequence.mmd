@@ -1,0 +1,34 @@
+sequenceDiagram
+ actor A as Anggota
+ actor L as Pustakawan
+ participant V as Django view
+ participant I as Identity adapter
+ participant S as Loan service
+ participant D as PostgreSQL16
+ A->>V: POST submit book/token
+ V->>I: Baca trusted principal
+ I-->>V: external ID dan member role
+ V->>S: Validasi scope, UUID dan token
+ S->>D: Atomic insert pending atau lookup retry token
+ D-->>S: Committed loan UUID
+ S-->>V: Loan UUID dan hasil submit
+ V-->>A: Redirect detail milik sendiri
+ L->>V: POST approve loan
+ V->>I: Baca trusted principal
+ I-->>V: external ID dan librarian role
+ V->>S: Authorize sebelum mutasi
+ S->>D: BEGIN, lock book lalu loan, cek pending/free
+ alt Guard valid
+ S->>D: Update approved + decided_at + decider, COMMIT
+ D-->>S: committed
+ S-->>V: Approval berhasil
+ V-->>L: Redirect detail sukses
+ else Guard konflik atau unique violation
+ S->>D: ROLLBACK
+ S-->>V: Konflik dan status terkini
+ V-->>L: 409 dan status terkini
+ else Database gagal
+ S->>D: ROLLBACK jika koneksi tersedia
+ S-->>V: Database unavailable
+ V-->>L: 503 tanpa sukses, reload sebelum retry
+ end

@@ -1,0 +1,18 @@
+flowchart LR
+ A[Anggota] --> U1
+ A --> U2
+ A --> U3
+ L[Pustakawan] --> U1
+ L --> U4
+ L --> U5
+ L --> U6
+ L --> U7
+ subgraph Portal[single library portal]
+ U1[UC-001 Lihat katalog]
+ U2[UC-002 Ajukan pinjaman]
+ U3[UC-003 Lihat pinjaman sendiri]
+ U4[UC-004 Lihat semua pinjaman]
+ U5[UC-005 Setujui pending]
+ U6[UC-006 Tolak pending]
+ U7[UC-007 Catat pengembalian]
+ end

@@ -1,0 +1,9 @@
+flowchart LR
+ B[Authenticated browser] -->|HTTPS 443| R
+ subgraph VM[Linux VM - satu per environment]
+ R[Public TLS reverse proxy] -->|HTTP 127.0.0.1:8000 proposed| A[Django process private]
+ A -->|TCP 127.0.0.1:5432 proposed| D[(PostgreSQL16 private)]
+ J[Daily backup timer proposed] -->|Local dump| D
+ end
+ J -->|Outbound HTTPS 443 encrypted backup proposed| S[Off VM backup storage]
+ X[Replacement VM] -. Restore drill .-> S

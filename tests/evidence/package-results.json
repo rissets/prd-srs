@@ -1,0 +1,189 @@
+[
+  {
+    "check": "package-artifacts",
+    "status": "pass",
+    "evidence": [
+      "PRD.md",
+      "SRS.md",
+      "ARCHITECTURE.md",
+      "WORKFLOWS-AND-ACCESS.md",
+      "DATABASE-DESIGN.md",
+      "IMPLEMENTATION-PLAN.md",
+      "TRACEABILITY.md"
+    ]
+  },
+  {
+    "check": "relative-file-links",
+    "status": "pass",
+    "evidence": []
+  },
+  {
+    "check": "canonical-mermaid-copy-consistency",
+    "status": "pass",
+    "evidence": {
+      "embedded": 10,
+      "mismatches": []
+    }
+  },
+  {
+    "check": "approval-requires-librarian-action",
+    "status": "pass",
+    "evidence": {
+      "pending_node": "C",
+      "approval_action": "F",
+      "approved_node": "G",
+      "bypass_without_action": false
+    }
+  },
+  {
+    "check": "workflow-system-lane-ownership",
+    "status": "pass",
+    "evidence": {
+      "expected_system_nodes": [
+        "C",
+        "D",
+        "R",
+        "G",
+        "H",
+        "J"
+      ]
+    }
+  },
+  {
+    "check": "service-response-chain-sequence",
+    "status": "pass",
+    "evidence": {
+      "database_result_via_service": true
+    }
+  },
+  {
+    "check": "service-response-chain-return",
+    "status": "pass",
+    "evidence": {
+      "database_result_via_service": true
+    }
+  },
+  {
+    "check": "erd-dictionary-field-alignment",
+    "status": "pass",
+    "evidence": {
+      "erd_fields": 14,
+      "dictionary_fields": 14,
+      "missing": [],
+      "extras": []
+    }
+  },
+  {
+    "check": "usecase-map-role-associations",
+    "status": "pass",
+    "evidence": {
+      "expected_pairs": [
+        [
+          "A",
+          "U1"
+        ],
+        [
+          "A",
+          "U2"
+        ],
+        [
+          "A",
+          "U3"
+        ],
+        [
+          "L",
+          "U1"
+        ],
+        [
+          "L",
+          "U4"
+        ],
+        [
+          "L",
+          "U5"
+        ],
+        [
+          "L",
+          "U6"
+        ],
+        [
+          "L",
+          "U7"
+        ]
+      ],
+      "missing": []
+    }
+  },
+  {
+    "check": "uml-source-and-role-associations",
+    "status": "pass",
+    "evidence": {
+      "source_exists": true,
+      "missing_pairs": [],
+      "format_parser": "not executed"
+    }
+  },
+  {
+    "check": "task-dependencies-acyclic",
+    "status": "pass",
+    "evidence": [
+      [
+        "T1",
+        "T2"
+      ],
+      [
+        "T1",
+        "T6"
+      ],
+      [
+        "T2",
+        "T3"
+      ],
+      [
+        "T3",
+        "T4"
+      ],
+      [
+        "T4",
+        "T5"
+      ],
+      [
+        "T5",
+        "T7"
+      ],
+      [
+        "T6",
+        "T7"
+      ]
+    ]
+  },
+  {
+    "check": "normative-requirement-traceability",
+    "status": "pass",
+    "evidence": {
+      "definitions": 18,
+      "rows": 18,
+      "missing": [],
+      "orphans": []
+    }
+  },
+  {
+    "check": "planned-case-inventory",
+    "status": "pass",
+    "evidence": [
+      "VER-001",
+      "VER-002",
+      "VER-003",
+      "VER-004",
+      "VER-005",
+      "VER-006",
+      "VER-007",
+      "VER-008",
+      "VER-009",
+      "VER-010",
+      "VER-011",
+      "VER-012",
+      "VER-013"
+    ]
+  }
+]

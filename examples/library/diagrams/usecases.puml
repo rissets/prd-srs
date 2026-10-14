@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+actor Anggota as A
+actor Pustakawan as L
+rectangle "Portal satu perpustakaan - MVP" {
+ usecase "UC-001 Lihat katalog" as U1
+ usecase "UC-002 Ajukan pinjaman sendiri" as U2
+ usecase "UC-003 Lihat pinjaman sendiri" as U3
+ usecase "UC-004 Lihat semua pinjaman" as U4
+ usecase "UC-005 Setujui pending" as U5
+ usecase "UC-006 Tolak pending" as U6
+ usecase "UC-007 Catat pengembalian" as U7
+}
+A --> U1
+A --> U2
+A --> U3
+L --> U1 : proposed
+L --> U4
+L --> U5
+L --> U6
+L --> U7
+@enduml

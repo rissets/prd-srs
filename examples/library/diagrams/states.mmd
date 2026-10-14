@@ -1,0 +1,7 @@
+stateDiagram-v2
+ [*] --> pending: submit anggota
+ pending --> approved: approve pustakawan dan buku bebas
+ pending --> rejected: reject pustakawan
+ approved --> returned: catat pengembalian
+ rejected --> [*]
+ returned --> [*]
